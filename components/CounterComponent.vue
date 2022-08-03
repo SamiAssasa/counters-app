@@ -1,6 +1,7 @@
 <!-- eslint-disable max-len -->
 <template>
     <div class="flex flex-col p-2 m-2 w-32 items-center gap-4">
+        <h2 class="text-gray-700">{{ name }}</h2>
         <div class="flex justify-center items-center rounded-lg w-full h-32 text-white bg-green-500 select-none hover:bg-green-600 transition duration-150 ease-in-out" v-on:click="increment">{{ count }}</div>
         <div class="inline-flex" role="group">
             <button class="bg-green-500 text-white rounded-l-md p-2 hover:bg-green-600 transition duration-150 ease-in-out" v-on:click="increment">+</button>
@@ -15,6 +16,7 @@ export default {
   name: 'CounterComponent',
   data() {
     return {
+      name: 'My Counter',
       count: 0,
     };
   },
